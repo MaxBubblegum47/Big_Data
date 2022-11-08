@@ -72,13 +72,11 @@ def query(mycol):
     #    | | | ' \| | '_/ _` | | (_) | || / -_| '_| || |
     #    |_| |_||_|_|_| \__,_|  \__\_\\_,_\___|_|  \_, |
     #                                              |__/     
-    # terza query: tutte le ispezioni con city BROOKLYN e tutte qulle di NEW YORK
-    # prendo il settore Cicarette Retail Dealer - 127
-    # ordine in base address.number
+    # query on all object with 11234 zip code, that have Cigarette Retail Dealer as sector between the 2016-1-4 and the 2016-4-30
+    # then create a group with the object id and the street of all the company inspected and make a count about how many company per street
+    # have been inspected. Finally sort the result by the count yet done
     query = [
       {"$match" : {"address.zip" : 11234, "sector" : "Cigarette Retail Dealer - 127", "date" : {"$gte":"2016-1-1", "$lte":"2016-4-30"}}},
-      # {"$match" : {"sector" : "Cigarette Retail Dealer - 127"}},
-      # {"$match" : {"date" : {"$gte":"2016-1-1", "$lte":"2016-4-30"}}},
       {"$group" : { "_id" : "$id", "street_inspected" : {"$addToSet" : '$address.street'}}},
       {"$unwind" : "$street_inspected"},                
       {'$group': {'_id': '$street_inspected', 'count': { '$sum': 1}}},
@@ -99,17 +97,14 @@ def query(mycol):
     #  | _/ _ | || | '_|  _| ' \  | (_) | || / -_| '_| || |
     #  |_|\___/\_,_|_|  \__|_||_|  \__\_\\_,_\___|_|  \_, |
     #                                                 |__/     
-    # quarta query: fai una creazione di un set in cui abbiamo
-    # settore - city - street - result
-    # poi faccio un unwind 
-    # poi conto tutti i settori di tipo X per la citta' di New York con result Warning di una stessa via
+
     
     #   ___ _  __ _   _       ___                    
     #  | __(_)/ _| |_| |_    / _ \ _  _ ___ _ _ _  _ 
     #  | _|| |  _|  _| ' \  | (_) | || / -_| '_| || |
     #  |_| |_|_|  \__|_||_|  \__\_\\_,_\___|_|  \_, |
     #                                           |__/ 
-    # quinta query: conto le citta' che sono presenti nel json per un determinato tipo di settore
+
     
 
 
@@ -119,15 +114,15 @@ def main():
   mycol = connect()
   print("OK\n")
 
-  # # insert
-  # print("Inserting new object inside: " + str(collection))
-  # insert(mycol)
-  # print("OK\n")
+  # insert
+  print("Inserting new object inside: " + str(collection))
+  insert(mycol)
+  print("OK\n")
   
-  # # update
-  # print("Updating the collection: " + str(collection))
-  # update(mycol)
-  # print("OK\n")
+  # update
+  print("Updating the collection: " + str(collection))
+  update(mycol)
+  print("OK\n")
   
   # query
   print("Queries on collection: " + str(collection))
