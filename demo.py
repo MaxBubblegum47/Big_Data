@@ -50,6 +50,7 @@ def query(mycol):
     #                                                                     |__/ 
     # Every inspections with address.zip 10030 and 11373, that have Mobile Food Vendor - 881 as sector, grouped  by id and business_name
     # and sorted by business_name
+
     query = [
       {"$match" : {"address.zip" : {"$in" : [10030, 11373]}}},
       {"$match" : {"sector" : "Mobile Food Vendor - 881"}},
@@ -75,6 +76,7 @@ def query(mycol):
     # query on all object with 11234 zip code, that have Cigarette Retail Dealer as sector between the 2016-1-4 and the 2016-4-30
     # then create a group with the object id and the street of all the company inspected and make a count about how many company per street
     # have been inspected. Finally sort the result by the count yet done
+    
     query = [
       {"$match" : {"address.zip" : 11234, "sector" : "Cigarette Retail Dealer - 127", "date" : {"$gte":"2016-1-1", "$lte":"2016-4-30"}}},
       {"$group" : { "_id" : "$id", "street_inspected" : {"$addToSet" : '$address.street'}}},
