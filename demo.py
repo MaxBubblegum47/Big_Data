@@ -76,18 +76,18 @@ def query(mycol):
     # prendo il settore Cicarette Retail Dealer - 127
     # ordine in base address.number
     query = [
-      {"$match" : {"address.zip" : 11234}},
-      {"$match" : {"sector" : "Cigarette Retail Dealer - 127"}},
-      {"$match" : {"date" : {"$gte":"2016-1-1", "$lte":"2016-4-30"}}},
-      {"$group" : { "_id" : "$id", "street_inspected" : {"$addToSet" : '$address.street'}, 'inspected_business': {"$addToSet": "$business_name"}}},
+      {"$match" : {"address.zip" : 11234, "sector" : "Cigarette Retail Dealer - 127", "date" : {"$gte":"2016-1-1", "$lte":"2016-4-30"}}},
+      # {"$match" : {"sector" : "Cigarette Retail Dealer - 127"}},
+      # {"$match" : {"date" : {"$gte":"2016-1-1", "$lte":"2016-4-30"}}},
+      {"$group" : { "_id" : "$id", "street_inspected" : {"$addToSet" : '$address.street'}}},
       {"$unwind" : "$street_inspected"},                
       {'$group': {'_id': '$street_inspected', 'count': { '$sum': 1}}},
-      {'$sort': {'business_name': 1}}
+      {'$sort': {'count': 1}}
     ]
 
     result = mycol.aggregate(query)
 
-    print("Second Query:\n")
+    print("Third Query:\n")
 
     for x in result:
       print(x)
@@ -119,15 +119,15 @@ def main():
   mycol = connect()
   print("OK\n")
 
-  # insert
-  print("Inserting new object inside: " + str(collection))
-  insert(mycol)
-  print("OK\n")
+  # # insert
+  # print("Inserting new object inside: " + str(collection))
+  # insert(mycol)
+  # print("OK\n")
   
-  # update
-  print("Updating the collection: " + str(collection))
-  update(mycol)
-  print("OK\n")
+  # # update
+  # print("Updating the collection: " + str(collection))
+  # update(mycol)
+  # print("OK\n")
   
   # query
   print("Queries on collection: " + str(collection))
