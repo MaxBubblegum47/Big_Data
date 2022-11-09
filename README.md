@@ -1,2 +1,2 @@
 # Demo_MongoDB
-First Assignment of Big Data course
+First Assignment of Big Data course. In JSON folder there are the file that has been used to test and edit the database; city_inspections_db.json is the final file that has been used to make the queries and all other test. In the Python folder you can find the python code that makes use of PyMongo library and in JupyterNotebook there is a notebook with notes about the code. PyMongo is required to run the python code. 
