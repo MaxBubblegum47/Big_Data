@@ -101,7 +101,10 @@ def query(mycol):
     #  | _/ _ | || | '_|  _| ' \  | (_) | || / -_| '_| || |
     #  |_|\___/\_,_|_|  \__|_||_|  \__\_\\_,_\___|_|  \_, |
     #                                                 |__/     
-    #
+    # Inspect in 3 differents part of New York, between the 2015-1-1 and the 2016-12-31, which is the most sector that have more result like:
+    # - Fail
+    # - Violation Issued
+    
     query = [
       {"$match" : {"address.zip" : {"$in" : [10475, 11234, 11427]}, "result" : {"$in" : ["Fail", "Violation Issued"]}, "date" : {"$gte":"2015-1-1", "$lte":"2016-12-31"}}},
       {"$group" : { "_id" : "$certificate_number", "sector_inspected" : {"$addToSet" : '$sector'}}},
