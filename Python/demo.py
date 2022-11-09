@@ -5,7 +5,7 @@ import datetime
 server = "mongodb://localhost:27017/"
 database = "City"
 collection = "City_Inspections_DB"
-index_name = "date"
+index_name = "date_index"
 
 def connect():
   myclient = pymongo.MongoClient(server)
@@ -15,17 +15,33 @@ def connect():
 
 
 def insert(mycol):
+  
   inspection = {"id" : "00000-0000-ENFO", "certificate_number" : "17041999", "business_name" : "Videogames Center",
   "date" : "1999-4-17", "result" : "Fail", "sector" : "Videogames", "address" : {"city" : "Georgia",
   "zip" : "41030", "street" : "Rue de Baptiste", "number" : "19"}}  
-  mycol.insert_one(inspection)
+  
+  check = mycol.find({"id":str(inspection.get("id"))}).distinct("id")
+  
+  if not check:
+    mycol.insert_one(inspection)
+  else:
+    print("There is already this object")
+    
   
 
 def update(mycol):
-  mycol.update_one({"id":"00000-0000-ENFO"},{"$set":{"Inspector Name":"Lorenzo Stigliano"}}, upsert=False)
+  query = {"id":"00000-0000-ENFO"}
+  new_values = {"$set":{"Inspector Name":"Lorenzo Stigliano"}}
+
+  check = mycol.find(query).distinct("id")
+  if not check:
+    print("There is document with the right id to be updated")
+  else:
+    mycol.update_one(query, new_values, upsert = True)
+
 
 def index(mycol):
-  mycol.create_index(index_name)
+  mycol.create_index([('date', pymongo.ASCENDING )], name = index_name)
 
 def query(mycol):
     #   ___ _        _      ___                    
