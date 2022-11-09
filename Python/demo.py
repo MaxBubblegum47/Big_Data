@@ -56,9 +56,9 @@ def query(mycol):
     query = [
       {"$match" : {"address.zip" : {"$in" : [10030, 11373]}}},
       {"$match" : {"sector" : "Mobile Food Vendor - 881"}},
-      {"$group" : {'_id': '$id', 'inspected_business': {'$addToSet': '$business_name'}}},
+      {"$group" : {"_id": "$id", "inspected_business": {"$addToSet": "$business_name"}}},
       {"$unwind" : "$inspected_business"},
-      {'$sort': {'inspected_business': 1}}
+      {"$sort": {"inspected_business": 1}}
     ]
 
     print("Second Query:\n")
@@ -81,10 +81,10 @@ def query(mycol):
     
     query = [
       {"$match" : {"address.zip" : 11234, "sector" : "Cigarette Retail Dealer - 127", "date" : {"$gte":"2016-1-1", "$lte":"2016-4-30"}}},
-      {"$group" : { "_id" : "$id", "street_inspected" : {"$addToSet" : '$address.street'}}},
+      {"$group" : { "_id" : "$id", "street_inspected" : {"$addToSet" : "$address.street"}}},
       {"$unwind" : "$street_inspected"},                
-      {'$group': {'_id': '$street_inspected', 'count': { '$sum': 1}}},
-      {'$sort': {'count': 1}}
+      {"$group": {"_id": "$street_inspected", "count": { "$sum": 1}}},
+      {"$sort": {"count": 1}}
     ]
 
     result = mycol.aggregate(query)
@@ -104,15 +104,15 @@ def query(mycol):
     # Inspect in 3 differents part of New York, between the 2015-1-1 and the 2016-12-31, which is the most sector that have more result like:
     # - Fail
     # - Violation Issued
-    
+
     query = [
       {"$match" : {"address.zip" : {"$in" : [10475, 11234, 11427]}, "result" : {"$in" : ["Fail", "Violation Issued"]}, "date" : {"$gte":"2015-1-1", "$lte":"2016-12-31"}}},
       {"$group" : { "_id" : "$certificate_number", "sector_inspected" : {"$addToSet" : '$sector'}}},
       {"$unwind" : "$sector_inspected"},                
-      {'$group': {'_id': '$sector_inspected', 'count': { '$sum': 1}}},
+      {"$group": {"_id": "$sector_inspected", "count": { "$sum": 1}}},
       {'$sort': {'count': -1}},
-      {'$group': { '_id': "$sector_inspected", 'maxval': { '$first': '$$ROOT'}}},
-      {'$replaceWith': '$maxval' } 
+      {"$group": { "_id": "$sector_inspected", "maxval": { "$first": '$$ROOT'}}},
+      {"$replaceWith": "$maxval"} 
     ]
 
     result = mycol.aggregate(query)
