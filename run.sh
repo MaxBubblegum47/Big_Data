@@ -1,3 +1,3 @@
 #!/bin/sh
 
-python demo.py
+python Python/demo.py
