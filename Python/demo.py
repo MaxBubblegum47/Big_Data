@@ -5,6 +5,7 @@ import datetime
 server = "mongodb://localhost:27017/"
 database = "City"
 collection = "City_Inspections_DB"
+index_name = "date"
 
 def connect():
   myclient = pymongo.MongoClient(server)
@@ -22,8 +23,9 @@ def insert(mycol):
 
 def update(mycol):
   mycol.update_one({"id":"00000-0000-ENFO"},{"$set":{"Inspector Name":"Lorenzo Stigliano"}}, upsert=False)
-  
 
+def index(mycol):
+  mycol.create_index(index_name)
 
 def query(mycol):
     #   ___ _        _      ___                    
@@ -99,15 +101,26 @@ def query(mycol):
     #  | _/ _ | || | '_|  _| ' \  | (_) | || / -_| '_| || |
     #  |_|\___/\_,_|_|  \__|_||_|  \__\_\\_,_\___|_|  \_, |
     #                                                 |__/     
+    #
+    query = [
+      {"$match" : {"address.zip" : {"$in" : [10475, 11234, 11427]}, "result" : {"$in" : ["Fail", "Violation Issued"]}, "date" : {"$gte":"2015-1-1", "$lte":"2016-12-31"}}},
+      {"$group" : { "_id" : "$certificate_number", "sector_inspected" : {"$addToSet" : '$sector'}}},
+      {"$unwind" : "$sector_inspected"},                
+      {'$group': {'_id': '$sector_inspected', 'count': { '$sum': 1}}},
+      {'$sort': {'count': -1}},
+      {'$group': { '_id': "$sector_inspected", 'maxval': { '$first': '$$ROOT'}}},
+      {'$replaceWith': '$maxval' } 
+    ]
 
-    
-    #   ___ _  __ _   _       ___                    
-    #  | __(_)/ _| |_| |_    / _ \ _  _ ___ _ _ _  _ 
-    #  | _|| |  _|  _| ' \  | (_) | || / -_| '_| || |
-    #  |_| |_|_|  \__|_||_|  \__\_\\_,_\___|_|  \_, |
-    #                                           |__/ 
+    result = mycol.aggregate(query)
 
+    print("Fourth Query:\n")
+
+    for x in result:
+      print(x)
     
+    print("\n------------------------------------------------------------------\n")
+        
 
 
 def main():
@@ -126,6 +139,11 @@ def main():
   update(mycol)
   print("OK\n")
   
+  # indexing
+  print("Indexing the collection: " + str(collection) + " with an index on " + index_name)
+  index(mycol)
+  print("OK\n")
+
   # query
   print("Queries on collection: " + str(collection))
   query(mycol)
