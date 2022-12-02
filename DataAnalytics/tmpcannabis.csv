@@ -1,0 +1,393 @@
+	CANNABIS	Unnamed: 1	Country/Territory	Cannabis Use	Unnamed: 4	Unnamed: 5	Unnamed: 6	Unnamed: 7	TIME	Unnamed: 9	Unnamed: 10	Unnamed: 11	Unnamed: 12	Unnamed: 13
+2	Africa	East Africa	Kenya	1.2			2.1	0.3	2016	15-64	ARQ	HHS		
+3			Kenya	2.1	0.3	4			2007	15-65	Govt	HHS	b, e	
+4			Kenya	7.1					2004	15-64	ARQ, NGO, Council of Europe 	SS, A 	c, d, e, f 	
+5			Madagascar	9.1					2004	15-64	ARQ	SS, A	d, e	
+6			Mauritius	1.08					2009	15-54	Government source		a	
+7			Mauritius	3.9					2004	15-54	ARQ 			
+8		North Africa	Algeria	0.52			1.06	0.03	2010	12+	ARQ	HHS		
+9			Egypt	5.31					2016	15-64	MedSPAD/UNODC estimate 	SS	d	
+10			Egypt	6.24	2.9	9.58			2006	15-64	Govt; Academic Research	HHS, SS	a, d	
+11			Morocco	10.47					2017	15-64	MedSPAD/UNODC estimate 	SS	d	
+12			Morocco	4.22					2004	15-64	ARQ	HHS 		
+13			Tunisia	5.35					2017	15-64	MedSPAD/UNODC estimate 	SS	d	
+14			Tunisia	2.6					2013	15-64	ARQ	HHS		
+15		Southern Africa	South Africa	3.65	2.88	4.42			2011	15-64	ARQ	SS	d, e	
+16			South Africa	4.26	3.52	6.18			2008	15-64	ARQ 	HHS 	a, e 	
+17			Zambia	9.5	4	15.6			2004	15-64	Govt; Academic Research	SS	d, e	
+18			Zambia	17.7					2003		UNODC Estimate 			
+19		West and Central Africa	Burkina Faso	2.9					2006	15-64	UNODC Estimate		d, e	
+20			Cabo Verde	2.4					2012	15-64	UNODC/Govt.	HHS		
+21			Cabo Verde	8.1					2004	15-64	UNODC Estimate		d, e	
+22			Côte d'Ivoire	3.24	1.99	4.3			2017	15-64	Government/UNODC Estimate	SS	d	
+23			Liberia	7.52					2017	15-64	WHO GSHS/UNODC Estimate	SS	d, e	
+24			Liberia	3.18	1.53	4.83			2008	15-64	UNODC Estimate		a, b, e	
+25			Nigeria 	10.76	10.26	11.26	18.8	2.6	2017	15-64	Government/UNODC	HHS/I		
+26			Nigeria	14.3	11.76	16.84			2008	15-64	ARQ	HHS	a, b, e	
+27			Sierra Leone	6.48					2017	15-64	WHO GSHS/UNODC Estimate	SS	d, e	
+28			Sierra Leone	5.42	3.52	7.32			2010	15-64	UNODC Estimate		a, b, e	
+29			Togo	1.0	0.2	3.1			2009	15-64	UNODC Estimate	SS	d, e	
+30			Togo	2.73					2006	15-64	UNODC Estimate 	SS 	d, e 	
+31	Americas	Caribbean	Bahamas	3.1			5	1	2017	12-65	ARQ	HHS		
+32			Bahamas	5.54	3.2	7.89			2008	15-64	ARQ	SS	d, e	
+33			Bahamas	4.7					2003	15-64	UNODC Estimate 	SS 	d, e 	
+34			Barbados	8.3					2006	15-64	CICAD	HHS		
+35			Dominican Republic	0.68			1.4	0.22	2010	12-65	CICAD	HHS		
+36			Dominican Republic	0.31	0.25	1.41			2008	15-64	ARQ	SS	d, e	
+37			Haiti	2.5			2.3	2.7	2018	15-64	ARQ	HHS		
+38			Haiti	1.51	0.26	2.75			2010	15-64	UNODC Estimate	SS	d, e	
+39			Haiti	1.41	0.43	2.15			2005	15-64	UNODC Estimate	SS	d, e	
+40			Jamaica	18.0			28.5	7.8	2016	12-65	Government source	HHS		Cannabis herb
+41			Jamaica	7.21	4.25	10.17			2010	15-64	UNODC Estimate	SS	d, e	
+42			Jamaica	9.86	7.52	12.2			2006	15-64	Government source	SS	d, e	
+43			Jamaica	10.7					2001	12-55	UNODC Estimate 		e 	
+44			Puerto Rico	4.88	3.1	6.65			2005	15-64	Government source	SS	d, e	
+45			Saint Lucia	8.87	5.64	12.1			2010	15-64	UNODC Estimate	SS	d, e	
+46			Saint Lucia	9.0					2006	15-64	UNODC Estimate	SS	d, e	
+47			Trinidad and Tobago	4.788	1.396	8.179			2017	15-64	WHO GSHS/UNODC Estimate	SS	d, e	
+48			Trinidad and Tobago	4.03	1.55	6.52			2010	15-64	UNODC Estimate	SS	d, e	
+49			Trinidad and Tobago	4.66	2.91	6.42			2006	15-64	Government source	SS	d, e	
+50			Trinidad and Tobago	3.7					2002		UNODC Estimate 		e 	
+51		Central America	Belize	8.45					2005	12-65	CICAD	HHS		
+52			Costa Rica	5.18			7.84	2.49	2015	15-64	ARQ	HHS		
+53			Costa Rica	2.76			4.4	1.07	2010	15-64	ARQ	HHS		
+54			Costa Rica	1.02					2006	12-70	ARQ 	HHS 		
+55			El Salvador	2.03	1.12	3.67	3.93	0.62	2014	12-65	Government source	HHS		
+56			El Salvador	0.39	0.35	0.43			2005	12-65	CICAD	HHS		
+57			Guatemala	3.48	0.438	6.521			2014	15-64	Government source/UNODC Estimate	SS	d	
+58			Guatemala	4.8					2005	12-65	UNODC Estimate	HHS, SS	c, d	
+59			Honduras	0.83	0.41	1.59			2005	12-65	UNODC Estimate	SS	d, e	
+60			Honduras	1.5					2004	15-64	UNODC Estimate 	SS 	d, e 	
+61			Nicaragua	1.07	1.06	1.07			2006	12-65	UNODC Estimate	HHS	c	
+62			Nicaragua	2.2					2002	12-65	UNODC Estimate	HHS 		
+63			Panama	0.77			1.52	0.14	2015	12-65	ARQ	HHS		Urban areas. Cannabis herb.
+64			Panama	3.55	3.4	3.7			2003	12-65	UNODC Estimate	HHS	d, e	
+65		North America	Bermuda	10.9	10.7	11.2			2009	16-65	Government source	HHS		
+66			Canada	20.7	19.4	22	22.8	18.6	2019	15+	ARQ/Government source	HHS		
+67			Canada	14.8			18.7	11.1	2017	15+	ARQ	HHS		
+68			Canada	14.73			17.64	11.83	2015	15-64	ARQ	HHS		
+69			Canada	12.7			16.4	9	2013	15-64	ARQ	HHS		
+70			Canada	12.2			15.9	8.5	2012	15-64	ARQ	HHS		
+71			Canada	10.9					2011	15-64	ARQ	HHS		
+72			Canada	12.65					2010	15-64	ARQ 	HHS 		
+73			Mexico	2.1	1.9	2.3	3.5	0.9	2016	12-65	ARQ/Government	HHS		Cannabis herb
+74			Mexico	1.2	0.96	1.46	2.2	0.3	2011	12-65	Government Source	HHS		
+75			Mexico	1.0					2008	12-65	Government source	HHS		
+76			United States of America	21.9			23.8	20.1	2020	15-64	ARQ	HHS		
+77			United States of America	19.4			22.2	16.8	2018	15-64	ARQ	HHS		Cannabis herb
+78			United States of America	18.4			21.4	15.5	2017	15-64	ARQ	HHS		Cannabis herb
+79			United States of America	17.0			19.9	14.1	2016	15-64	ARQ	HHS		Cannabis herb
+80			United States of America	16.5			19.4	13.6	2015	15-64	ARQ	HHS		Cannabis herb
+81			United States of America	16.2			19.9	12.7	2014	15-64	ARQ	HHS		
+82			United States of America	15.4			18.7	12.2	2013	15-64	ARQ	HHS		
+83			United States of America	14.8					2012	15-64	ARQ	HHS		
+84			United States of America	14.0					2011	15-64	ARQ	HHS		
+85			United States of America	14.0					2010	15-64	ARQ	HHS 		
+86		South America	Argentina	8.13			11.1	5.46	2017	15-64	ARQ	HHS		Cannabis herb
+87			Argentina	3.2			4.7	1.7	2011	15-64	ARQ	HHS		
+88			Argentina	3.7					2008	15-64	ARQ	HHS 		
+89			Bolivia (Plurinational State of)	2.19			3.29	1.24	2018	15-64	ARQ	HHS		Marihuana (cannabis herb)
+90			Bolivia (Plurinational State of)	1.42	1.27	1.57	2.1100000000000003	0.8600000000000001	2014	12-65	ARQ/UNODC Estimate	HHS		Cannabis herb and resin
+91			Bolivia (Plurinational State of)	1.27			1.86	0.81	2013	12-65	ARQ	HHS		
+92			Bolivia (Plurinational State of)	4.5			8.9	1.1	2007	12-65	ARQ	HHS		
+93			Brazil	2.81			5.1	0.66	2012	15-64	Government source	HHS		
+94			Brazil	2.6					2005	12-65	Government source 	HHS	c	
+95			Chile	12.05			17.05	7.17	2020	15-64	ARQ	HHS		Includes marijuana and hashish
+96			Chile	13.33			18.98	7.76	2018	15-64	ARQ	HHS		Includes marijuana and hashish
+97			Chile	15.1			19.11	11.07	2016	15-64	ARQ	HHS		Cannabis herb and resin
+98			Chile	11.83			15.37	8.38	2014	15-64	ARQ	HHS		
+99			Chile	7.47			10.52	4.52	2012	15-64	ARQ	HHS		
+100			Chile	4.88					2010	15-64	ARQ			
+101			Chile	6.7					2008	15-64	ARQ 	HHS 		
+102			Colombia	2.68	2.46	2.9	4.21	1.26	2019	12-65	Government source	HHS		
+103			Colombia	3.27	2.94	3.6	5.36	1.3	2013	12-65	ARQ	HHS		
+104			Colombia	2.27	1.93	2.61	3.79	0.93	2008	12-65	ARQ			
+105			Colombia	1.9					2003	18-65 	ARQ 			
+106			Ecuador	0.67			0.84	0.53	2013	12-65	ARQ	HHS		Cannabis herb
+107			Ecuador	0.7					2007	12-65	ARQ	HHS		
+108			Guyana	4.6					2016	12-65	Government source	HHS		
+109			Guyana	4.04	1.56	6.53			2010	15-64	UNODC Estimate	SS	d, e	
+110			Guyana	3.5	0.97	5.95			2008	15-64	UNODC Estimate			
+111			Guyana	2.6					2002		UNODC Estimate 			
+112			Paraguay	1.6					2005	12-65	UNODC Estimate			
+113			Peru	1.624	1.241	2.006			2017	15-64	Government source/UNODC Estimate	SS	d, e	
+114			Peru	1.03			1.98	0.22	2010	12-65	ARQ	HHS		
+115			Peru	0.7					2006	15-64	Government source	HHS		
+116			Suriname	3.4			6.6	0.4	2013	12-65	ARQ	HHS		Herb
+117			Suriname	4.25	3.8	4.7			2007	12-65	Government source	HHS		
+118			Suriname	2.0					2002	15-64	UNODC Estimate 			
+119			Uruguay	14.6			17.8	11.5	2018	15-65	ARQ	HHS		Cannabis herb
+120			Uruguay	9.3			12.5	6.4	2014	15-65	ARQ	HHS		Cannabis herb
+121			Uruguay	8.3			11.5	5.4	2011	15-64	ARQ	HHS		
+122			Uruguay	5.6					2006	15-64	ARQ 	HHS 		
+123			Venezuela (Bolivarian Republic of)	1.56					2011	12-65	Government source	HHS		
+124			Venezuela (Bolivarian Republic of)	0.85					2005	15-64	Government source 	HHS 	a, e 	
+125	Asia	Central Asia and Transcaucasia	Armenia	3.5					2003	15-64	UNODC Estimate			
+126			Azerbaijan	3.5					2004	15-65	UNODC Estimate			
+127			Georgia	3.4			6.6	0.5	2015	18-64	ARQ	HHS		
+128			Georgia	2.7	1.2	4.3			2009	15-64	Government source/ NGO/Academic research	SS	b, d, e	
+129			Georgia	1.1					2005	15-64	ARQ 	SS 	a, d, e 	
+130			Kazakhstan	2.4	0.6	4.3			2012	15-64	ARQ	SS	d	
+131			Kazakhstan	4.2					2003	15-64	INCSR			
+132			Uzbekistan	4.2					2003	15-64	UNODC Estimate		e	
+133		East and South-East Asia	Cambodia	3.5					2003	15-64	UNODC Estimate			
+134			China, Taiwan Province of China	0.3					2005	12-64	AMCEWG			
+135			Indonesia	1.44	1.41	1.46			2019	15-64	ARQ/UNODC Estimate	HHS		Cannabis herb and resin
+136			Indonesia	0.91					2015	10-59	Government source	HHS		Estimate for 13 provinces
+137			Indonesia	0.18			0.33	0.04	2015	10-60	ARQ	HHS		20 of 34 provinces.
+138			Indonesia	0.5					2010	10-60	ARQ	HHS	a	
+139			Indonesia	0.44					2008	10-59	ARQ 	HHS 		
+140			Japan	0.1					2019	15-64	ARQ	HHS		
+141			Japan	0.03					2017	15-64	ARQ	HHS		
+142			Japan	0.3					2011	15-64	UNODC Estimate	HHS	e	
+143			Lao People's Democratic Republic	0.88	0.69	1.07			2008	15-64	UNODC report	SS	c, d	
+144			Malaysia	1.6					2003	15-64	UNODC Estimate			
+145			Myanmar	0.94					2005	15-64	UNODC Estimate		d, e	
+146			Philippines	1.64					2016	10-69	ARQ	HHS		Cannabis herb. Data for 2015/16.
+147			Philippines	0.61					2012	10-69	ARQ	HHS		
+148			Philippines	0.74					2008	10-64	ARQ	HHS		
+149			Republic of Korea	0.29	0.07	0.55			2004	15-64	ARQ	HHS	c, e	
+150			Thailand	1.33			1.81	0.861	2019	12-65	Government source	HHS		
+151			Thailand	1.2					2007	12-65	ARQ	HHS		
+152		Near and Middle East/South-West Asia	Afghanistan	3.8			6.1	1.5	2015	15+	INL	HHS		
+153			Afghanistan	4.28	3.37	5.18	8.1	0.2	2009	15-64	UNODC/ Govt. Source	HHS		
+154			Afghanistan	3.59					2005	15-64	UNODC Study (ICMP) 			
+155			Iran (Islamic Republic of)	0.58					2015	15-64	Government source/UNODC Estimate	HHS		Grass, hashish, marijuana and Gol
+156			Iran (Islamic Republic of)	0.61	0.54	0.7			2013	18+	Academic/UNODC Estimate	NSUM	a	Hashish
+157			Iran (Islamic Republic of)	0.17					2011	15-64	Government source			Cannabis resin
+158			Israel	14.0			15.3	12.3	2020	18-86	ARQ	HHS		
+159			Israel	27.0			32.2	21.8	2016	18-65	ARQ	HHS		
+160			Israel	8.88	8.9	8.9	12.3	5.5	2009	18-40	ARQ	HHS		
+161			Israel	8.5					2005	18-40	ARQ 			
+162			Kuwait	3.1					2005	15-64	UNODC Estimate			
+163			Lebanon	2.0	0.5	3.5			2009	15-64	Government source/MEDSPAD	SS	d, e	
+164			Lebanon	6.4					2001	15-64	ARQ 		d 	
+165			Pakistan	3.6	3.1	4	6.7	0.2	2012	15-64	Government/UNODC			
+166			Pakistan	3.9					2000	15-64	INCSR 			
+167			Saudi Arabia	0.3					2006	15-64	Government source/ NGO/Academic research	R		
+168			United Arab Emirates	5.35					2006	15-64	UNODC Estimate			
+169		South Asia	Bangladesh	3.3					2004	15-54	Academic research	HHS	a, e,f	
+170			Bhutan	4.2	1.8	6.5			2009	15-64	UNODC Estimate			
+171			India	2.83			5.05	0.6	2018	10-75	Government source	HHS		Herb, resin and leaf
+172			Maldives	2.55					2012	15-64	Government source			
+173			Nepal	0.709					2019	15-50	Government source/UNODC Estimate	HHS	e	
+174			Sri Lanka	1.9					2018	14+	Government source	HHS		
+175			Sri Lanka	1.42	1.26	1.58			2016	15-64	Government source	I	g,h	
+176			Sri Lanka	1.31					2012	15-64	ARQ	HHS		
+177			Sri Lanka	1.43	1.43	1.43			2010	15-64	UNODC Estimate		h	
+178	Europe	Eastern Europe	Belarus	1.07	0.9	1.3			2007	15-64	ESPAD	SS	c, d, e	
+179			Republic of Moldova	0.7					2010	15-64	Government source	HHS		
+180			Republic of Moldova	0.9					2008	15-64	Government source 	HHS 		
+181			Russian Federation	3.49	3.46	3.51			2007	15-64	ESPAD/UNODC Estimate	SS	d, e	Approximate adjustment
+182			Ukraine	2.13	1.29	2.98			2015	15-64	ESPAD/UNODC Estimate	SS	d, e	
+183			Ukraine	2.9	1.2	4.6			2011	15-64	UNODC Estimate	SS	d	
+184			Ukraine	2.5	2.4	2.59			2007	15-64	ESPAD 	SS 	d, e 	
+185		South-Eastern Europe	Albania	5.6					2014	15-64		HHS		Public health research
+186			Albania	5.6			10.2	1	2014	15-64	ARQ	HHS		Cannabis herb
+187			Albania	1.8					2006	15-64	Government source	SS	d, e	
+188			Bosnia and Herzegovina	1.6	0.32	2.89			2011	15-64	ESPAD	SS	d	
+189			Bosnia and Herzegovina	2.8	2.75	4.63			2007	15-64	ESPAD 	SS 	c, d, e 	
+190			Bulgaria	2.4			2.6	2.2	2020	15-64	ARQ	HHS		
+191			Bulgaria	4.2			5.9	2.3	2016	15-64	ARQ	HHS		
+192			Bulgaria	3.5			5.1	1.9	2012	15-64	ARQ	HHS		
+193			Bulgaria	2.5					2008	15-64	ARQ	HHS		
+194			Bulgaria	2.2					2007	15-64	ARQ 	HHS 	c, d, e 	
+195			Croatia	10.2			14.2	6.2	2019	15-64	ARQ	HHS		
+196			Croatia	7.9			11.5	4.3	2015	15-64	ARQ	HHS		
+197			Croatia	5.0					2012	15-64	EMCDDA	HHS		
+198			Croatia	5.18	5.1	5.3			2007	15-64	ESPAD 	SS 	d, e 	
+199			Kosovo under UNSCR 1244	1.3					2019	15-64	ESPAD/UNODC Estimate	SS	d	
+200			Montenegro	4.6			4.9	4.3	2017	15-64	ARQ	HHS		
+201			Montenegro	1.82	1.1	2.54			2015	15-64	ESPAD/UNODC Estimate	SS	d, e	
+202			Montenegro	1.9	0.43	3.3			2011	15-64	ESPAD	SS	d	
+203			Montenegro	0.23					2008	15-64	ESPAD 	SS 	d, e 	
+204			North Macedonia	6.6			8.3	4	2017	15-64	ARQ	HHS		
+205			North Macedonia	1.13	0.68	1.58			2015	15-64	ESPAD/UNODC Estimate	SS	d, e	
+206			North Macedonia	0.63	0.46	2.38			2008	15-64	ESPAD	SS	d, e	
+207			Romania	3.5			4.8	2.1	2019	15-64	ARQ	HHS		
+208			Romania	3.2			4.3	2	2016	15-64	ARQ	HHS		
+209			Romania	2.0			2.3	1.8	2013	15-64	ARQ	HHS		
+210			Romania	0.3					2010	15-64	ARQ	HHS		
+211			Romania	0.4					2007	15-64	ARQ 	HHS 		
+212			Serbia	2.0			2.8	1.2	2018	15-64	ARQ	HHS		
+213			Serbia	1.6			2.5	0.6	2014	18-64	Government source	HHS		
+214			Serbia	4.07	2.75	5.39			2006	15-64	Government source	HHS	a, d, e	
+215			Türkiye	1.11			2.22	0.09	2018	15-64	ARQ	HHS		
+216			Türkiye	1.11			2.22	0.09	2017	15-64	EMCDDA	HHS		
+217			Türkiye	0.3			0.5	0.1	2011	15-64	EMCDDA	HHS		
+218			Türkiye	1.9					2003	15-64	UNODC Estimate			
+219		Western and Central Europe	Austria	6.3	5.62	7.04			2020	15-64	Government source	HHS		
+220			Austria	6.4	5.5	7.2	7.2	5.6	2015	15-64	Government source	HHS		
+221			Austria	3.5					2008	15-64	ARQ	HHS		
+222			Austria	7.5					2004	15-64	EMCDDA 	HHS 		
+223			Belgium	7.0			10.4	3.7	2018	15-64	ARQ	HHS		
+224			Belgium	4.6			6.3	2.9	2013	15-64	ARQ	HHS		
+225			Belgium	5.1			7.2	3.2	2008	15-64	ARQ	HHS		
+226			Belgium	5.0			6.9	3.2	2004	15-64	EMCDDA/Government source	HHS 		
+227			Cyprus	4.0			6.4	1.7	2019	15-64	ARQ	HHS		
+228			Cyprus	2.2			3.5	0.9	2016	15-64	ARQ	HHS		
+229			Cyprus	2.2			3.5	1	2012	15-64	ARQ	HHS		
+230			Cyprus	4.4			7.3	1.5	2009	15-64	ARQ	HHS		
+231			Cyprus	2.1			3.7	0.6	2006	15-65	ARQ 			
+232			Czechia	9.4			14.6	4.2	2019	15-64	ARQ	HHS		
+233			Czechia	7.9			10	5.8	2018	15-64	ARQ	HHS		
+234			Czechia	8.9			11.9	5.9	2017	15-64	EMCDDA	HHS		
+235			Czechia	9.5			14.2	5	2016	15-64	ARQ	HHS		
+236			Czechia	9.4			13.4	5.3	2015	15-64	ARQ	HHS		
+237			Czechia	11.4			15.4	7.3	2014	15-64	ARQ	HHS		
+238			Czechia	8.9			13.2	5.3	2013	15-64	ARQ	HHS		
+239			Czechia	9.2			13.1	5.3	2012	15-64	ARQ	HHS		
+240			Czechia	9.7					2010	15-64	ARQ	HHS		
+241			Czechia	15.2					2008	15-64	Government source 	HHS 		
+242			Denmark	6.4			8.7	4.6	2017	16-64	ARQ	HHS		
+243			Denmark	6.9			9.2	5.1	2013	16-64	ARQ	HHS		
+244			Denmark	5.4					2010	16-64	ARQ	HHS		
+245			Denmark	5.5					2008	16-64	ARQ 	HHS 		
+246			Estonia	6.59			9.2	4.81	2018	16-64	ARQ	HHS		
+247			Estonia	6.0			8.3	3.8	2008	15-64	ARQ	HHS		
+248			Estonia	4.6					2003	15-64	ARQ 	HHS 		
+249			Finland	8.2			11.2	5.2	2018	15-64	ARQ	HHS		
+250			Finland	6.8			9.2	4.3	2014	15-64	ARQ	HHS		
+251			Finland	4.6			5.8	3.3	2010	15-64	ARQ	HHS		
+252			Finland	3.6					2006	15-64	ARQ 	HHS 		
+253			France	11.0			15.1	7.1	2017	18-64	EMCDDA	HHS		
+254			France	11.1			15.2	7.1	2016	18-64	EMCDDA	HHS		
+255			France	11.1			15	7.4	2014	15-64	ARQ	HHS		
+256			France	8.4			11.8	5.2	2010	15-64	ARQ	HHS		
+257			France	8.6					2005	15-64	ARQ 			
+258			Germany	7.09			8.87	5.25	2018	18-64	ARQ	HHS		
+259			Germany	6.1	5.6	6.7	7.4	4.9	2015	18-64	ARQ/Academic	HHS		
+260			Germany	4.5			6	3	2012	18-64	ARQ	HHS		
+261			Germany	4.8			6.4	3.1	2009	18-64	ARQ	HHS		
+262			Germany	4.7					2007	18-64	Government source 	HHS 		
+263			Greece	2.8			4.1	1.6	2015	18-64	ARQ	HHS		
+264			Greece	1.7			2.5	0.9	2004	15-64	EMCDDA			
+265			Hungary	1.3			2	0.6	2019	18-64	ARQ	HHS		
+266			Hungary	1.53			2.46	0.81	2015	18-64	ARQ	HHS		
+267			Hungary	2.3	1.7	2.9			2007	18-64	ARQ	HHS		
+268			Iceland	5.8			7.4	4.2	2017	18-64	ARQ	HHS		
+269			Iceland	6.6					2012	18-67	ARQ/Government	HHS		
+270			Iceland	3.4	1.67	5.16			2011	15-64	ESPAD	SS	d	
+271			Iceland	3.37	3.21	3.53			2007	15-64	ESPAD 	SS 	d, e 	
+272			Ireland	7.1			9.9	4.4	2019	15-64	ARQ	HHS		
+273			Ireland	7.7			11.2	4.3	2015	15-64	ARQ	HHS		Data refers to 2014-15.
+274			Ireland	6.0			9.1	2.9	2011	15-64	ARQ	HHS		
+275			Ireland	6.3					2007	15-64	Government source 	HHS 		
+276			Italy	10.21			12.6	7.83	2017	15-64	ARQ	HHS		
+277			Italy	9.2			11.9	6.6	2013	15-64	ARQ	HHS		Data refers to 2013-14
+278			Italy	4.0			5.19	3	2012	15-64	ARQ	HHS		
+279			Italy	14.6					2008	15-64	Government source	HHS		
+280			Italy	11.2					2005	15-65	EMCDDA 	HHS 		
+281			Latvia	3.9			6.1	1.8	2020	15-64	ARQ	HHS		
+282			Latvia	4.2			6.9	1.7	2015	15-64	ARQ	HHS		
+283			Latvia	4.0			5.7	2.4	2011	15-64	ARQ	HHS		
+284			Latvia	4.9					2007	15-64	ARQ 			
+285			Lithuania	2.7			4.6	1	2016	15-64	ARQ	HHS		
+286			Lithuania	2.3			3.6	1	2012	15-64	ARQ	HHS		
+287			Lithuania	5.6					2008	15-64	ARQ	HHS		
+288			Lithuania	2.2					2004	15-64	ARQ 			
+289			Luxembourg	5.4			7	4	2019	15-64	ARQ	HHS		
+290			Luxembourg	4.9			6.6	3.5	2014	15-64	ARQ/EMCDDA	HHS		
+291			Luxembourg	5.2	3.2	7.1			2010	15-64	ARQ	SS	d	
+292			Luxembourg	6.6	4.5	8.66			2006	15-64	ARQ	SS	d	
+293			Luxembourg	7.6					2003	15-64	UNODC Estimate 			
+294			Malta	0.9					2013	15-64	ARQ	HHS		
+295			Malta	3.1	1.39	4.82			2011	15-64	ESPAD	SS	d	
+296			Malta	4.51	4.42	4.6			2007	15-64	ESPAD 	SS 	d, e 	
+297			Monaco	10.47					2017	18-64	ESPAD/UNODC Estimate	SS	d	
+298			Netherlands	10.1			12.9	7.3	2020	15-64	ARQ	HHS		
+299			Netherlands	9.3			12.1	6.4	2019	15-64	EMCDDA	HHS		
+300			Netherlands	9.6			13.9	6.3	2018	15-64	EMCDDA	HHS		
+301			Netherlands	9.2	8.5	9.9	12.3	6.2	2017	15-64	EMCDDA	HHS		
+302			Netherlands	8.4			11	5.7	2016	15-64	EMCDDA	HHS		
+303			Netherlands	8.7			11.6	5.7	2015	15-64	EMCDDA	HHS		
+304			Netherlands	8.0			10.5	5.4	2014	15-64	ARQ	HHS		
+305			Netherlands	7.0					2009	15-64	ARQ			
+306			Netherlands	5.4					2005	15-64	ARQ 			
+307			Norway	4.3			5.8	2.8	2020	16-64	ARQ	HHS		
+308			Norway	5.1			7.1	3	2019	16-64	ARQ	HHS		
+309			Norway	5.4			7	3.7	2018	16-64	ARQ	HHS		Cannabis herb, resin and other types of cannabis
+310			Norway	5.3			7	3.4	2017	16-64	ARQ	HHS		Includes herb and hashish
+311			Norway	3.9			5.1	2.6	2016	16-64	ARQ	HHS		
+312			Norway	4.2			5.5	2.9	2015	16-64	ARQ	HHS		
+313			Norway	4.2			6	2.3	2014	16-64	ARQ	HHS		
+314			Norway	5.1			7.2	2.8	2013	16-64	ARQ	HHS		
+315			Norway	3.8					2009	15-64	ARQ	HHS		
+316			Norway	4.6					2004	15-64	ARQ 			
+317			Poland	3.8			5	2.6	2019	15-64	ARQ	HHS		Data refers to 2018-2019
+318			Poland	2.4			3.2	1.7	2016	15-64	ARQ	HHS		
+319			Poland	4.6			7.8	1.7	2014	15-64	ARQ	HHS		Data refers to 2014-2015
+320			Poland	3.8			6	1.7	2012	15-64	ARQ	HHS		
+321			Poland	9.6					2010	15-64	ARQ	HHS		
+322			Poland	2.7					2006	15-64	ARQ 	HHS 		
+323			Portugal	5.1			7.3	3.1	2017	15-64	ARQ	HHS		Data refers to 2016-2017
+324			Portugal	2.7			4.1	1.3	2012	15-64	ARQ	HHS		
+325			Portugal	3.6					2007	15-64	ARQ	HHS		
+326			Slovakia	3.8			5.9	1.7	2019	15-64	ARQ	HHS		
+327			Slovakia	4.3			7	1.7	2015	15-64	ARQ	HHS		
+328			Slovakia	3.63					2010	15-64	EMCDDA	HHS		
+329			Slovakia	6.9					2006	15-64	ARQ	HHS		
+330			Slovenia	5.9	5.4	6.4	7.8	3.8	2018	15-64	EMCDDA	HHS	a, b	
+331			Slovenia	4.4			5.9	2.8	2012	15-64	ARQ	HHS		
+332			Slovenia	3.1					2007	15-64	EMCDDA	HHS	e	
+333			Spain	10.5			14.6	6.3	2020	15-64	ARQ	HHS		Survey conducted between February and March 2020. 
+334			Spain	11.0	10.6	11.4	15.4	6.6	2017	15-64	EMCDDA	HHS		
+335			Spain	9.5			13.3	5.6	2015	15-64	ARQ	HHS		
+336			Spain	9.2			12.9	5.4	2013	15-64	ARQ	HHS		
+337			Spain	9.6			13.6	5.5	2011	15-64	ARQ	HHS		
+338			Spain	10.6			14.8	6.2	2009	15-64	ARQ 	HHS 		
+339			Sweden	3.8			5	2.5	2020	16-64	ARQ	HHS		
+340			Sweden	3.9			5.2	2.4	2018	16-64	ARQ	HHS		
+341			Sweden	3.4			4.1	2.6	2016	16-64	ARQ	HHS		
+342			Sweden	3.2			4.1	2.3	2015	16-64	ARQ	HHS		
+343			Sweden	2.88			4.1	1.63	2014	15-64	ARQ	HHS		
+344			Sweden	3.16			4.35	1.86	2013	17-64	ARQ	HHS		
+345			Sweden	3.0					2012	16-64	ARQ	HHS		
+346			Sweden	2.61					2011	16-64	ARQ	HHS		
+347			Sweden	2.8					2010	16-64	ARQ 	HHS 		
+348			Switzerland	9.09					2016	15-64	Government source	HHS	a	
+349			Switzerland	8.09					2015	15-64	ARQ	HHS		
+350			Switzerland	6.7			9.3	4.2	2014	15-64	ARQ	HHS		
+351			Switzerland	5.7			7.8	3.7	2013	15-64	ARQ	HHS		
+352			Switzerland	6.3					2012	15+	ARQ	HHS		
+353			Switzerland	5.1					2011	15-64	ARQ	HHS		
+354			Switzerland	3.4					2008	15-64	ARQ 	HHS 		
+355			United Kingdom (England and Wales)	7.15			9.07	5.26	2019	16-64	ARQ	HHS		Data refers to 2019/20. Office for National Statistics (ONS)
+356			United Kingdom (England and Wales)	7.6			10.28	5	2018	16-59	Government source	HHS		Data refers to 2018/19. Crime Survey for England and Wales.
+357			United Kingdom (England and Wales)	7.18			9.55	4.82	2017	16-59	Government source	HHS		Data refers to 2017/18. Crime Survey for England and Wales.
+358			United Kingdom (England and Wales)	6.6			8.99	4.23	2016	16-59	Government source	HHS		Data refers to 2016/17. Crime Survey for England and Wales.
+359			United Kingdom (England and Wales)	6.47			9.14	3.85	2015	16-59	Government source	HHS		Data refers to 2015/16. Crime Survey for England and Wales.
+360			United Kingdom (England and Wales)	6.69			9.43	4.02	2014	16-59	Government source	HHS		Data refers to 2014/15. Crime Survey for England and Wales.
+361			United Kingdom (England and Wales)	6.59			9.11	4.1	2013	16-59	Government source	HHS		Data refers to 2013/14. Crime Survey for England and Wales.
+362			United Kingdom (England and Wales)	6.29			8.51	4.08	2012	16-59	Government source	HHS		Data refers to 2012/13. Crime Survey for England and Wales.
+363			United Kingdom (England and Wales)	6.8			9.53	4.1	2011	16-59	Government source	HHS		Data refers to 2011/12. Crime Survey for England and Wales.
+364			United Kingdom (England and Wales)	6.7			9.15	4.29	2010	16-59	Government source 	HHS 		Data refers to 2010/11. Crime Survey for England and Wales.
+365			United Kingdom (Northern Ireland)	4.6					2014	15-64	Government source	HHS		Data refers to 2014/15
+366			United Kingdom (Northern Ireland)	5.1					2011	15-64	Government source	HHS		Data refers to 2010/11
+367			United Kingdom (Northern Ireland)	7.2					2006	15-64	Government source 	HHS 		
+368			United Kingdom (Scotland)	6.29			9	3.68	2014	16-64	Government source	HHS		Data refers to 2014/15
+369			United Kingdom (Scotland)	6.5			9.5	3.6	2013	16-64	Government source	HHS		Data refers to 2012/13
+370			United Kingdom (Scotland)	7.0					2011	16-64	Government source	HHS		Data refers to 2010/11
+371			United Kingdom (Scotland)	7.6					2010	16-64	Government source 	HHS 		Data refers to 2009/10
+372	Oceania	Australia and New Zealand	Australia	11.6			14.7	8.6	2019	14+	ARQ	HHS		
+373			Australia	10.4			13.1	7.9	2016	14+	ARQ	HHS		
+374			Australia	10.2			12.8	7.6	2013	14+	ARQ	HHS		
+375			Australia	10.3					2010	14+	ARQ	HHS		
+376			Australia	10.6					2007	15-64	Government source 	HHS 		
+377			New Zealand	15.0			19	11	2020	18+	ARQ	HHS		Data for 2019-20.
+378			New Zealand	15.0			19.9	10.3	2019	15+	ARQ	HHS		Data for 2018-19.
+379			New Zealand	11.9			15.7	8.4	2018	15+	Government source	HHS		Data for 2017-18.
+380			New Zealand	14.03			18.55	9.61	2017	15-64	Government source	HHS	a	Data for 2016-17.
+381			New Zealand	13.73			17.9	9.66	2016	15-64	Government source	HHS	a	Data for 2015-16.
+382			New Zealand	11.0	10.3	11.7	14.3	7.9	2013	15+	Government source	HHS		2012/13 New Zealand Health Survey: Drug Module
+383			New Zealand	14.6	13.4	15.7	18.2	11.3	2008	16-64	Government source	HHS		2007/08 New Zealand Alcohol and Drug Use Survey
+384			New Zealand	14.6					2007	16-64	Government source	HHS		
+385			New Zealand	13.25					2006	15-64	ARQ 	HHS 	a 	
+386		Melanesia	Fiji	5.08	3.04	7.12			2004	15-64	Government source	SS	d, e	
+387	"Except where the prevalence values are taken from household surveys, changes between years need to be interpreted with caution as they might reflect a change in the methodology or the data source from which the estimate was derived and therefore should not be considered as a change in prevalence.
+
+Method: HHS=Household survey, SS=School survey, A=Adjusted from other sources, I=Indirect estimates, R=Registry. 
+
+UNODC Adjustments: a=adjusted for age (15-64), b=population-based/household-type study/survey, c=adjusted from a limited geographic population-based study/survey, d=adjusted from school/youth survey, e=adjusted from lifetime/monthly prevalence adjusted to annual prevalence, f=adjusted from specialized population surveys (including Rapid Assessments), g=adjusted from treatment data, h=adjusted from drug registries, i=adjusted from HIV, problematic drug users (only for heroin), j=lifetime prevalence reported, x=figure may include non-medical use of prescription opioids, z=figures may also include other non-ATS stimulants, z*= figures include the use of prescription stimulants, (non-prescription/non-therapeutic use). 
+
+The 'Method' and 'Adjustment/notes' columns have been completed only for more recent data included in previous and present issues of the World Drug Report. "													
