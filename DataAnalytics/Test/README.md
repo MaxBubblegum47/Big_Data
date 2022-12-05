@@ -1,0 +1,2 @@
+# ATTENZIONE
+Tutti i file CSV hanno un path che deve essere aggiornato per poter far funzionare correttamente le operazioni di lettura dei documenti. Questi file contengono gli esperimenti svolti per testare le librerie usate nella relazione finale. Sono una versione alpha frammentata in più file della effettiva relazione finale.
