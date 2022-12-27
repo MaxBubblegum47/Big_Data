@@ -1,11 +1,30 @@
 import os
 import text2emotion as te
 from lyricsgenius import Genius
+from sklearn.feature_extraction.text import TfidfVectorizer
+
+# IDEA: FARE UN CONFRONTO CON SCILEARN RIGUARDO LE SIMILITUDINE TRA BRANI, QUINDI PRIMA DI TUTTO DIVIDO I BRANI E LI ORGANIZZO E POI FACCIO LE SIMILITUDINI
+# ANOTHER PROBLEM: DIVIDERE E ORGANIZZARE I BRANI IN BASE AL GENERE MUSICALE DI APPARTENENZA
+
+list_file = [(root, files) for root, dirs, files in os.walk("/home/maxbubblegum/Big_Data/TextAnalytics/Lyrics_Not_Processed/Lyrics/Eminem/") if files] #set here the path of the directory of all your songs (if it contains other subdir no problem)
+
+documents = []
+for path, files in list_file:
+    for canzoni in files:
+        documents.append((path+canzoni))
+
+
+tfidf = TfidfVectorizer().fit_transform(documents)
+# no need to normalize, since Vectorizer will return normalized tf-idf
+pairwise_similarity = tfidf * tfidf.T
+print(pairwise_similarity)
+
+
+# LETTURA DI TUTTI QUANTI I FILE 
 # to print all the file
 # list_file=[]
 # list_file = [(root, files) for root, dirs, files in os.walk("/home/maxbubblegum/Desktop/Big_Data/TextAnalytics/Lyrics_Not_Processed") if files] #set here the path of the directory of all your songs (if it contains other subdir no problem)
 # list_file.sort()
-# print(list_file)
 
 # for path, files in list_file:
 #     print(path)
@@ -18,7 +37,9 @@ from lyricsgenius import Genius
         
 #         # print(righe)
 
+#-----------------------------------------------------------------------------------------------
 
+# LETTURA DELLE RIGHE DI UNA CANZONE
 # song = open("/home/maxbubblegum/Desktop/Big_Data/TextAnalytics/Lyrics_Not_Processed/Lyrics/The Neighbourhood/Sweater Weather_The Neighbourhood", encoding="ISO-8859-1")
 
 # for line printing
@@ -39,26 +60,29 @@ from lyricsgenius import Genius
 # print(dir(song))
 # print(song.stats)
 
-import requests
-import statistics
-from statistics import mode
+#-----------------------------------------------------------------------------------------------
 
-# query the API
-apiquery = "http://itunes.apple.com/search?term="+"Back in Black AC/DC"+"&media=music&entity=musicTrack&attribute=songTerm&limit=100"
-resp = requests.get(apiquery)
+# UTILIZZO DI ITUNES PER OTTENERE INFORMAZIONI RIGUARDO AL GENERE MUSICALE
+# import requests
+# import statistics
+# from statistics import mode
 
-while resp.status_code != 200:
-    # Something went wrong
-    print('GET /tasks/ {}'.format(resp.status_code))
-    time.sleep(120)
-    resp = requests.get(apiquery)
+# # query the API
+# apiquery = "http://itunes.apple.com/search?term="+"Back in Black"+"&media=music&entity=musicTrack&attribute=songTerm&limit=100"
+# resp = requests.get(apiquery)
 
-results = resp.json()['results']
-#print("Number of results from itunes:", len(results))
+# while resp.status_code != 200:
+#     # Something went wrong
+#     print('GET /tasks/ {}'.format(resp.status_code))
+#     time.sleep(120)
+#     resp = requests.get(apiquery)
 
-# qui conviene fare tipo una stima, prendiamo il valore che capita più spesso e quello sarà il genere della mia canzone
-genreRes = list()
-for res in results:
-    genreRes.append(res['primaryGenreName'])
+# results = resp.json()['results']
+# #print("Number of results from itunes:", len(results))
 
-print(mode(genreRes))
+# # qui conviene fare tipo una stima, prendiamo il valore che capita più spesso e quello sarà il genere della mia canzone
+# genreRes = list()
+# for res in results:
+#     genreRes.append(res['primaryGenreName'])
+
+# print(mode(genreRes))
