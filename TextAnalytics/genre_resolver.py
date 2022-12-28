@@ -79,8 +79,10 @@ for path, files in list_file:
         # print(final_dir)
 
         if os.path.isfile(source) and source not in final_dir:
-            print("Moving files from: " + source + " to: " + final_dir)                      
-            shutil.move(source, final_dir) 
-
+            print("Moving files from: " + source + " to: " + final_dir)
+            try:                      
+                shutil.move(source, final_dir) 
+            except:
+                print("Canzone gia' presente")
 
 print(final_result)

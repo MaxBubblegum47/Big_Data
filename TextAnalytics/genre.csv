@@ -1,9 +1,14 @@
 ,0
-0,Hip-Hop
-1,Unknown
-2,Karaoke
-3,Pop
-4,Rock
+0,Singer
+1,Classical
+2,Unknown
+3,Rock
+4,Children's Music
 5,Country
-6,Hard Rock
-7,Dance
+6,Hip-Hop
+7,Pop
+8,Jazz
+9,Holiday
+10,Alternative
+11,R&B
+12,Spoken Word
