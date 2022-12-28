@@ -25,7 +25,7 @@ for path, files in list_file:
         # print(path+canzoni) percorso completo della canzone da spostare
         # print(canzoni.split('_')[0]) # stampa nomi di canzoni
         apiquery = "http://itunes.apple.com/search?term="+canzoni.split('_')[0]+"&media=music&entity=musicTrack&attribute=songTerm&limit=100"
-        time.sleep(1)
+        # time.sleep(1)
         
         # funziona meglio usare direttamente un'altra rete (cellulare come hotspot) o una vpn
         proxy = {
