@@ -6,7 +6,7 @@ from nltk.stem import PorterStemmer
 from nltk.stem import LancasterStemmer
 from nltk.stem.wordnet import WordNetLemmatizer
 
-stop_words = set(stopwords.words('english'))
+# stop_words = set(stopwords.words('english')) not working
 stemmer = PorterStemmer()
 lemmatizer = WordNetLemmatizer()
 
