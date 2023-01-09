@@ -88,31 +88,40 @@ X_test = tf.convert_to_tensor(X_test.todense())
 history = model.fit(X_train, y_train_tensor, epochs=10, validation_data=(X_test, y_test_tensor))
 
 # display the data
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 
-# Get the training and validation loss values
-loss = history.history['loss']
-val_loss = history.history['val_loss']
+# # Get the training and validation loss values
+# loss = history.history['loss']
+# val_loss = history.history['val_loss']
 
-# Plot the training and validation loss
-plt.plot(loss)
-plt.plot(val_loss)
-plt.title('Model loss')
-plt.ylabel('Loss')
-plt.xlabel('Epoch')
-plt.legend(['Training loss', 'Validation loss'])
-plt.show()
+# # Plot the training and validation loss
+# plt.plot(loss)
+# plt.plot(val_loss)
+# plt.title('Model loss')
+# plt.ylabel('Loss')
+# plt.xlabel('Epoch')
+# plt.legend(['Training loss', 'Validation loss'])
+# plt.show()
 
 # display result by music genre
-from sklearn.metrics import classification_report
+# Use the model to predict the class for each example in the test set
+predictions = model.predict_classes(X_test)
 
-# predict labels for test data
-y_pred = model.predict(X_test)
+# Create a dictionary to store the accuracy for each genre
+genre_accuracies = {genre: 0 for genre in genres}
 
-# convert predicted labels back to original labels
-y_pred = encoder.inverse_transform(y_pred)
+# Calculate the accuracy for each genre
+for i in range(len(predictions)):
+    if predictions[i] == y_test[i]:
+        genre_accuracies[genres[y_test[i]]] += 1
 
-# print classification report
-print(classification_report(y_test, y_pred, target_names=genres))
+# Divide the number of correct predictions by the total number of examples
+# to get the accuracy for each genre
+for genre in genre_accuracies:
+    genre_accuracies[genre] /= len(y_test)
+
+# Print the accuracies for each genre
+print(genre_accuracies)
+
 
 
