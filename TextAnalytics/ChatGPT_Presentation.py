@@ -54,8 +54,7 @@ for genre in genres:
     ]
 
     # Split the subset into training and test sets
-    train_set = subset.sample(n=N, random_state=R
-ANDOM_SEED, replace=True)
+    train_set = subset.sample(n=N, random_state=RANDOM_SEED, replace=True)
     test_set = subset.drop(train_set.index)
     
     # Append the subsets to the master sets
@@ -116,7 +115,7 @@ print(f"Best Tf-idf vectorizer/Multinomial NB parameters: {random_search.best_pa
 # Use grid search to tune the hyperparameters of the count vectorizer/Multinomial NB pipeline with Tf-idf transformer
 pipeline = Pipeline([
     ('vect', CountVectorizer()),
-    ('tfidf', TfidfTransformer()),
+    ('tfidf', TfidfVectorizer()),
     ('clf', MultinomialNB())
 ])
 param_grid = {
