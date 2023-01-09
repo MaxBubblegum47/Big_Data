@@ -103,25 +103,31 @@ history = model.fit(X_train, y_train_tensor, epochs=10, validation_data=(X_test,
 # plt.legend(['Training loss', 'Validation loss'])
 # plt.show()
 
-# display result by music genre
-# Use the model to predict the class for each example in the test set
-predictions = model.predict_classes(X_test)
+# Get the predicted class probabilities for each sample in the test set
+probs = model.predict(X_test)
 
-# Create a dictionary to store the accuracy for each genre
-genre_accuracies = {genre: 0 for genre in genres}
+# Initialize a dictionary to store the accuracy for each genre
+genre_accuracy = {}
 
-# Calculate the accuracy for each genre
-for i in range(len(predictions)):
-    if predictions[i] == y_test[i]:
-        genre_accuracies[genres[y_test[i]]] += 1
+# Loop over the test samples
+for i, sample in enumerate(X_test):
+    # Get the true class for the sample
+    true_class = y_test[i]
+    # Get the predicted class for the sample
+    predicted_class = np.argmax(probs[i])
+    # Get the genre name for the true and predicted classes
+    true_genre = encoder.inverse_transform([true_class])[0]
+    predicted_genre = encoder.inverse_transform([predicted_class])[0]
+    # Update the accuracy for the true genre
+    if true_genre not in genre_accuracy:
+        genre_accuracy[true_genre] = 1 if true_genre == predicted_genre else 0
+    else:
+        genre_accuracy[true_genre] += 1 if true_genre == predicted_genre else 0
 
-# Divide the number of correct predictions by the total number of examples
-# to get the accuracy for each genre
-for genre in genre_accuracies:
-    genre_accuracies[genre] /= len(y_test)
+# Divide the number of correctly predicted samples by the total number of samples for each genre to get the accuracy
+for genre, count in genre_accuracy.items():
+    genre_accuracy[genre] = count / test_df[test_df.ranker_genre == genre].shape[0]
 
-# Print the accuracies for each genre
-print(genre_accuracies)
-
-
-
+# Print the accuracy for each genre
+for genre, accuracy in genre_accuracy.items():
+    print(f'Accuracy for {genre}: {accuracy:.2f}')
