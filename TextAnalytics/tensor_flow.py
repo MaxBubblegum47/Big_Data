@@ -86,3 +86,33 @@ X_test = tf.convert_to_tensor(X_test.todense())
 
 
 history = model.fit(X_train, y_train_tensor, epochs=10, validation_data=(X_test, y_test_tensor))
+
+# display the data
+import matplotlib.pyplot as plt
+
+# Get the training and validation loss values
+loss = history.history['loss']
+val_loss = history.history['val_loss']
+
+# Plot the training and validation loss
+plt.plot(loss)
+plt.plot(val_loss)
+plt.title('Model loss')
+plt.ylabel('Loss')
+plt.xlabel('Epoch')
+plt.legend(['Training loss', 'Validation loss'])
+plt.show()
+
+# display result by music genre
+from sklearn.metrics import classification_report
+
+# predict labels for test data
+y_pred = model.predict(X_test)
+
+# convert predicted labels back to original labels
+y_pred = encoder.inverse_transform(y_pred)
+
+# print classification report
+print(classification_report(y_test, y_pred, target_names=genres))
+
+
