@@ -112,19 +112,20 @@ random_search.fit(train_df.lyric, train_df.ranker_genre)
 print(f"Best Tf-idf vectorizer/Multinomial NB accuracy: {random_search.best_score_:.3f}")
 print(f"Best Tf-idf vectorizer/Multinomial NB parameters: {random_search.best_params_}")
 
-# Use grid search to tune the hyperparameters of the count vectorizer/Multinomial NB pipeline with Tf-idf transformer
-pipeline = Pipeline([
-    ('vect', CountVectorizer()),
-    ('tfidf', TfidfVectorizer()),
-    ('clf', MultinomialNB())
-])
-param_grid = {
-    'vect__max_df': [0.5, 0.75, 1.0],
-    'vect__min_df': [2, 3, 4],
-    'vect__max_features': [None, 1000, 5000],
-    'clf__alpha': [0.1, 0.5, 1.0]
-}
-grid_search = GridSearchCV(pipeline, param_grid, cv=5)
-grid_search.fit(train_df.lyric, train_df.ranker_genre)
-print(f"Best count vectorizer/Tf-idf transformer/Multinomial NB accuracy: {grid_search.best_score_:.3f}")
-print(f"Best count vectorizer/Tf-idf transformer/Multinomial NB parameters: {grid_search.best_params_}")
+# Not workng for format reason
+# # Use grid search to tune the hyperparameters of the count vectorizer/Multinomial NB pipeline with Tf-idf transformer
+# pipeline = Pipeline([
+#     ('vect', CountVectorizer()),
+#     ('tfidf', TfidfVectorizer()),
+#     ('clf', MultinomialNB())
+# ])
+# param_grid = {
+#     'vect__max_df': [0.5, 0.75, 1.0],
+#     'vect__min_df': [2, 3, 4],
+#     'vect__max_features': [None, 1000, 5000],
+#     'clf__alpha': [0.1, 0.5, 1.0]
+# }
+# grid_search = GridSearchCV(pipeline, param_grid, cv=5)
+# grid_search.fit(train_df.lyric, train_df.ranker_genre)
+# print(f"Best count vectorizer/Tf-idf transformer/Multinomial NB accuracy: {grid_search.best_score_:.3f}")
+# print(f"Best count vectorizer/Tf-idf transformer/Multinomial NB parameters: {grid_search.best_params_}")
