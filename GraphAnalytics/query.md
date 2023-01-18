@@ -1,6 +1,4 @@
 # Prima query 
-UFFICIALE - Quali sono gli utenti piu' influenti all'interno del grafo
-
 CALL gds.graph.project.cypher(
 'twitter-user',
 'MATCH (u:User) return id(u) as id',
@@ -14,8 +12,7 @@ MATCH (u1:User)<-[:MENTION]-(t:Tweet)<-[:POST]-(u2:User)
 RETURN id(u2) as source, id(u1) as target
 UNION
 MATCH (t1:Troll)<-[:MENTION]-(t:Tweet)<-[:POST]-(t2:Troll)
-RETURN id(t2) as source, id(t1) as target',
-{validateRelationships: false})
+RETURN id(t2) as source, id(t1) as target')
 
 CALL gds.degree.stream('twitter-user')
 YIELD nodeId, score
@@ -23,14 +20,14 @@ RETURN gds.util.asNode(nodeId).screen_name AS name, score
 ORDER BY score DESC LIMIT 10;
 
 
-stima del mutate
-CALL gds.degree.mutate.estimate('twitter-user', { mutateProperty: 'degree' })
-YIELD requiredMemory, bytesMin, bytesMax, heapPercentageMin, heapPercentageMax, nodeCount, relationshipCount;
-
-stima effettiva
 CALL gds.degree.mutate('twitter-user', { mutateProperty: 'degree' })
 YIELD centralityDistribution, nodePropertiesWritten
-RETURN centralityDistribution.min AS minimumScore, centralityDistribution.mean AS meanScore, nodePropertiesWritten
+RETURN centralityDistribution.min AS minimumScore, centralityDistribution.mean 
+AS meanScore, nodePropertiesWritten
+
+CALL gds.degree.mutate.estimate('twitter-user', { mutateProperty: 'degree' })
+YIELD requiredMemory, bytesMin, bytesMax, 
+heapPercentageMin, heapPercentageMax, nodeCount, relationshipCount;
 
 CALL gds.graph.nodeProperty.stream('twitter-user', 'degree')
 YIELD nodeId, propertyValue
@@ -39,32 +36,26 @@ MATCH (t:Troll)
 WHERE t.name = Id.name AND t.followers_count > 5000
 MATCH (u:Troll)
 WHERE u.name = Id.name AND u.followers_count > 5000
-RETURN t.name as TrollsName, u.name as UsersName
+RETURN t.name as TrollsName, u.name as UsersNamen
 
 -----------------------------------------------------------
 # Seconda query 
-
-Prendo le comunity piu' usate e prendo poi i loro tag maggiori
-
-CALL gds.graph.project('gds-native-twitter', ['User', 'Troll', 'Tweet', 'Hashtag'], '*')
+CALL gds.graph.project('native-twitter', ['User', 'Troll', 
+'Tweet', 'Hashtag'], '*')
 YIELD graphName, nodeCount, relationshipCount;
 
-prima lo faccio vedere senza hashtag
-
-CALL gds.louvain.stream('twitter-user')
+CALL gds.louvain.stream('native-twitter')
 YIELD nodeId, communityId
 WITH communityId AS communityId, size(collect(nodeId)) as size
 WHERE size > 10
 RETURN communityId, size
 ORDER BY size DESC;
 
-poi con hashtag
-
-CALL gds.louvain.stream('twitter-user', {maxIterations:20})
+CALL gds.louvain.stream('native-twitter', {maxIterations:10})
 YIELD nodeId, communityId
 WITH communityId AS community, size(collect(nodeId)) as size, 
 collect(nodeId) as ids
-WHERE size > 10
+WHERE size > 10000
 MATCH (u:User)-->(t)-[*1..2]->(n) 
 WHERE id(u) in ids 
 AND (t:Tweet)
@@ -74,13 +65,11 @@ CASE WHEN head(labels(n))='Hashtag' THEN '#'+n.tag
 ELSE '@'+n.screen_name END as text
 ORDER BY count(t) DESC
 RETURN community, size, collect(text)[0..5] AS hashtags_or_users
-ORDER BY size DESC
+ORDER BY size DESC LIMIT 10;
 
-memory stima
-CALL gds.louvain.mutate.estimate('gds-native-twitter',
+CALL gds.louvain.mutate.estimate('native-twitter',
 {mutateProperty:'commnuityID'})
 YIELD requiredMemory, bytesMin, bytesMax, heapPercentageMin,
 heapPercentageMax, nodeCount, relationshipCount;
 
-informazione salvata sul named graph
 CALL gds.louvain.mutate('gds-native-twitter', {mutateProperty:'community'})
